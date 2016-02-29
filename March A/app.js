@@ -8,7 +8,7 @@
 
  app.sendFeedback = function ()
 {
-  feedback.showFeedback();
+  window.feedback.showFeedback();
 }
     var bootstrap = function() {
         $(function() {
@@ -22,6 +22,16 @@
 
     if (window.cordova) {
         document.addEventListener('deviceready', function() {
+    
+            var feedbackOptions = {
+    enableShake: true // shake to show the feedback dialog, default true
+  };
+             window.feedback.initialize(
+    "hdrdmxfeod7su9ie", // grab it at your Telerik Platform AppFeedback project
+    feedbackOptions
+  );
+            
+            
             if (navigator && navigator.splashscreen) {
                 navigator.splashscreen.hide();
             }

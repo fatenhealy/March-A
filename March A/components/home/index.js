@@ -43,6 +43,9 @@ app.home = kendo.observable({
             _dataSourceOptions: dataSourceOptions,
             _jsdoOptions: jsdoOptions,
             itemClick: function(e) {
+                window.plugins.EqatecAnalytics.Monitor.TrackFeature("Adding Items");
+                
+                
                 app.mobileApp.navigate('#components/home/details.html?uid=' + e.dataItem.uid);
             },
             addClick: function() {

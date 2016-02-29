@@ -1,6 +1,20 @@
 {
+  "CordovaPluginVariables": {
+    "com.telerik.feedback": {
+      "API_KEY": "hdrdmxfeod7su9ie",
+      "API_URL": "https://platform.telerik.com/feedback/api/v1",
+      "ENABLE_SHAKE": "True"
+    },
+    "com.telerik.plugin.telerikanalytics": {
+      "AUTO_TRACK_EXCEPTIONS": "True",
+      "AUTO_TRACK_KENDO_EVENTS": "True",
+      "PRODUCT_ID": "ca5b9c9ff0654b0a8ddd1aaf5a9c38ed"
+    }
+  },
   "CorePlugins": [
+    "com.telerik.feedback@2.0.0",
     "com.telerik.LivePatch",
+    "com.telerik.plugin.telerikanalytics@3.3.2",
     "org.apache.cordova.battery-status",
     "org.apache.cordova.contacts",
     "org.apache.cordova.device",
@@ -18,12 +32,5 @@
     "org.apache.cordova.splashscreen",
     "org.apache.cordova.statusbar",
     "org.apache.cordova.vibration"
-  ],
-  "CordovaPluginVariables": {
-    "com.telerik.feedback": {
-      "API_KEY": "hdrdmxfeod7su9ie",
-      "API_URL": "https://platform.telerik.com/feedback/api/v1",
-      "ENABLE_SHAKE": "true"
-    }
-  }
+  ]
 }

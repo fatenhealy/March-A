@@ -6,7 +6,7 @@
   "DisplayName": "March A",
   "Author": "",
   "Description": "March A",
-  "BundleVersion": "1.0",
+  "BundleVersion": "1.1",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
@@ -42,5 +42,12 @@
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
   ],
-  "iOSDeploymentTarget": "6.0"
+  "iOSDeploymentTarget": "6.0",
+  "CordovaPluginVariables": {
+    "com.telerik.feedback": {
+      "API_KEY": "hdrdmxfeod7su9ie",
+      "API_URL": "https://platform.telerik.com/feedback/api/v1",
+      "ENABLE_SHAKE": "True"
+    }
+  }
 }
