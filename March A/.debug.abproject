@@ -1,7 +1,6 @@
 {
   "CorePlugins": [
     "org.apache.cordova.battery-status",
-    "org.apache.cordova.camera",
     "org.apache.cordova.console",
     "org.apache.cordova.contacts",
     "org.apache.cordova.device",
@@ -19,5 +18,12 @@
     "org.apache.cordova.splashscreen",
     "org.apache.cordova.statusbar",
     "org.apache.cordova.vibration"
-  ]
+  ],
+  "CordovaPluginVariables": {
+    "com.telerik.feedback": {
+      "API_KEY": "hdrdmxfeod7su9ie",
+      "API_URL": "https://platform.telerik.com/feedback/api/v1",
+      "ENABLE_SHAKE": "true"
+    }
+  }
 }

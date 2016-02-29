@@ -2,7 +2,7 @@
   "ProjectName": "March A",
   "ProjectGuid": "84dc1f5a-1df4-4f1c-9772-d8f71d063321",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.MarchA",
+  "AppIdentifier": "com.healy.MarchA",
   "DisplayName": "March A",
   "Author": "",
   "Description": "March A",
@@ -41,5 +41,6 @@
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
-  ]
+  ],
+  "iOSDeploymentTarget": "6.0"
 }

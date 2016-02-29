@@ -4,13 +4,71 @@
     {
       "type": "kendo-ui-mobile:view",
       "name": "home",
-      "components": [],
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "shortText",
+                  "title": "Phone",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Phone"
+                }
+              ],
+              "name": "editableListForm5",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [],
+              "name": "editableListForm6",
+              "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [],
+              "name": "editableListForm7",
+              "formType": "edit"
+            }
+          ],
+          "name": "homeModel",
+          "dataProvider": "progressDataProvider",
+          "collection": "Customer",
+          "headerField": "Name",
+          "filterField": "Name",
+          "detailHeaderField": "Name",
+          "detailSubHeaderField": "SalesRep",
+          "detailDescriptionField": "Address",
+          "addItemForm": true,
+          "editItemForm": true,
+          "pullToRefresh": true,
+          "endlessScroll": false,
+          "deleteItemButton": true
+        }
+      ],
       "title": "Home View",
       "addToNavigation": true,
       "icon": "home"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "progressDataProvider",
+      "catalogContent": "[{\"name\":\"Customer\",\"path\":\"/Customer\",\"schema\":{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"dsCustomer\":{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"eCustomer\":{\"type\":\"array\",\"items\":{\"additionalProperties\":false,\"properties\":{\"_id\":{\"type\":\"string\",\"name\":\"_id\"},\"id\":{\"type\":\"string\",\"default\":\"\",\"title\":\"\",\"name\":\"id\"},\"seq\":{\"type\":\"integer\",\"default\":0,\"title\":\"\",\"name\":\"seq\"},\"CustNum\":{\"type\":\"integer\",\"ablType\":\"INTEGER\",\"default\":0,\"title\":\"CustNum\",\"name\":\"CustNum\"},\"Name\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Name\",\"name\":\"Name\"},\"Address\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Address\",\"name\":\"Address\"},\"Phone\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Phone\",\"name\":\"Phone\"},\"SalesRep\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"SalesRep\",\"name\":\"SalesRep\"},\"Balance\":{\"type\":\"number\",\"ablType\":\"DECIMAL\",\"default\":0,\"title\":\"Balance\",\"name\":\"Balance\"},\"State\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"NH\",\"title\":\"State\",\"name\":\"State\"},\"Country\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Country\",\"name\":\"Country\"}}}}}}}},\"operations\":[{\"path\":\"\",\"type\":\"update\",\"verb\":\"put\",\"params\":[{\"name\":\"dsCustomer\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/CustomerService/Customer\"},{\"name\":\"count\",\"path\":\"/count?filter={filter}\",\"type\":\"invoke\",\"verb\":\"put\",\"params\":[],\"url\":\"/rest/CustomerService/Customer/count?filter={filter}\"},{\"name\":\"GetOrders\",\"path\":\"/{piCustNum}/GetOrders\",\"type\":\"invoke\",\"verb\":\"put\",\"params\":[],\"url\":\"/rest/CustomerService/Customer/{piCustNum}/GetOrders\"},{\"name\":\"GetDetails\",\"path\":\"/{piCustNum}/GetDetails\",\"type\":\"invoke\",\"verb\":\"put\",\"params\":[],\"url\":\"/rest/CustomerService/Customer/{piCustNum}/GetDetails\"},{\"path\":\"\",\"type\":\"create\",\"verb\":\"post\",\"params\":[{\"name\":\"dsCustomer\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/CustomerService/Customer\"},{\"path\":\"\",\"type\":\"delete\",\"verb\":\"delete\",\"params\":[{\"name\":\"dsCustomer\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/CustomerService/Customer\"},{\"path\":\"?filter={filter}\",\"type\":\"read\",\"verb\":\"get\",\"mappingType\":\"JFP\",\"capabilities\":\"ablFilter,top,skip,id,orderBy\",\"params\":[],\"url\":\"/rest/CustomerService/Customer?filter={filter}\"}],\"fn\":{\"count\":{},\"GetOrders\":{},\"GetDetails\":{}},\"url\":\"/rest/CustomerService/Customer\",\"fields\":{\"eCustomer\":[{\"type\":\"string\",\"default\":\"\",\"title\":\"\",\"name\":\"id\"},{\"type\":\"integer\",\"default\":0,\"title\":\"\",\"name\":\"seq\"},{\"type\":\"integer\",\"ablType\":\"INTEGER\",\"default\":0,\"title\":\"CustNum\",\"name\":\"CustNum\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Name\",\"name\":\"Name\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Address\",\"name\":\"Address\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Phone\",\"name\":\"Phone\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"SalesRep\",\"name\":\"SalesRep\"},{\"type\":\"number\",\"ablType\":\"DECIMAL\",\"default\":0,\"title\":\"Balance\",\"name\":\"Balance\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"NH\",\"title\":\"State\",\"name\":\"State\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"Country\",\"name\":\"Country\"}]},\"primaryKeys\":{},\"_dataSetName\":\"dsCustomer\",\"generic\":{}}]",
+      "title": "Progress Data Service",
+      "source": "jsdo",
+      "url": "http://oemobiledemo.progress.com/CustomerService",
+      "catalogUrl": "http://oemobiledemo.progress.com/CustomerService/static/mobile/CustomerService.json",
+      "authentication": "anonymous"
+    }
+  ],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
   "view": "home",
